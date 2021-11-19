@@ -25,7 +25,7 @@ int main() {
     for (int i = 0; i < indexAges; i++) {
         printf("\nDigite a idade %d: ", i);
         scanf("%d", &atualAge);
-        pointAges[i] = atualAge;
+        pointertAges[i] = atualAge;
 
         if (atualAge > 17) {
             indexOfAge++;
@@ -35,9 +35,9 @@ int main() {
 
     }
 
-    pointOfAge = malloc(indexOfAge * sizeof(int));
+    pointertOfAge = malloc(indexOfAge * sizeof(int));
 
-    pointUnderAge = malloc(indexUnderAge * sizeof(int));
+    pointertUnderAge = malloc(indexUnderAge * sizeof(int));
 
 
     int auxIndexOfAges = 0;
