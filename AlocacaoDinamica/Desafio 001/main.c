@@ -13,19 +13,19 @@ void showArray(int index, int array[]) {
 
 int main() {
 
-    int *pointAges, *pointUnderAge, *pointOfAge;
+    int *pointerAges, *pointerUnderAge, *pointerOfAge;
     int indexAges, atualAge, indexUnderAge = 0, indexOfAge = 0;
 
     printf("Digite a quntidade de idades que serão cadastradas: ");
     scanf("%d", &indexAges);
 
-    pointAges = malloc(indexAges * sizeof(int));
+    pointerAges = malloc(indexAges * sizeof(int));
 
 
     for (int i = 0; i < indexAges; i++) {
         printf("\nDigite a idade %d: ", i);
         scanf("%d", &atualAge);
-        pointertAges[i] = atualAge;
+        pointerAges[i] = atualAge;
 
         if (atualAge > 17) {
             indexOfAge++;
@@ -35,37 +35,37 @@ int main() {
 
     }
 
-    pointertOfAge = malloc(indexOfAge * sizeof(int));
+    pointerOfAge = malloc(indexOfAge * sizeof(int));
 
-    pointertUnderAge = malloc(indexUnderAge * sizeof(int));
+    pointerUnderAge = malloc(indexUnderAge * sizeof(int));
 
 
     int auxIndexOfAges = 0;
     int auxIndexUnderAge = 0;
     for (int i = 0; i < indexAges; i++) {
 
-        if (pointAges[i] > 17) {
-            pointOfAge[auxIndexOfAges] = pointAges[i];
+        if (pointerAges[i] > 17) {
+            pointerOfAge[auxIndexOfAges] = pointerAges[i];
             auxIndexOfAges++;
         } else {
-            pointUnderAge[auxIndexUnderAge] = pointAges[i];
+            pointerUnderAge[auxIndexUnderAge] = pointerAges[i];
             auxIndexUnderAge++;
         }
 
     }
 
     printf("Idades cadastradas: => ");
-    showArray(indexAges, pointAges);
+    showArray(indexAges, pointerAges);
 
     printf("\nIdades maiores que 18: => ");
-    showArray(indexOfAge, pointOfAge);
+    showArray(indexOfAge, pointerOfAge);
 
     printf("\nIdades menores que 18: => ");
-    showArray(indexUnderAge, pointUnderAge);
+    showArray(indexUnderAge, pointerUnderAge);
 
-    free(pointAges);
-    free(pointOfAge);
-    free(pointUnderAge);
+    free(pointerAges);
+    free(pointerOfAge);
+    free(pointerUnderAge);
 
 
     return 0;
